@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Calculator</title>   
+</head>
+<body>
+    <h2>Enter Your Birthdate</h2>
+    <form method="POST">
+        <input type="date" name="birthdate" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+        <h3>Results:</h3>
+        <p>Age: {{ result.age }} years</p>
+        <p>Days until next birthday: {{ result.days_until_birthday }} days</p>
+        <p>Zodiac Sign: {{ result.zodiac_sign }}</p>
+        <p>Born in a Leap Year: {{ result.leap_year_status }}</p>
+    {% endif %}
+</body>
+</html>
